@@ -1,4 +1,4 @@
-"""searchcomments URL Configuration
+"""app URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.0/topics/http/urls/
@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 
 from comments.views import search_view
-from pages.views import home_view
+from home.views import home_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),

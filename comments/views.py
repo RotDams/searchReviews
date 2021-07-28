@@ -1,4 +1,3 @@
-# Create your views here.
 from django.db.models import Q
 from django.shortcuts import render
 
@@ -16,4 +15,5 @@ def search_view(request):
         'all_comments': all_comments,
         'word_researched': word,
     }
+
     return render(request, "search/search.html", context)
