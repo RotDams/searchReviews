@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Comment Searcher</title>
+</head>
+
+<style>
+    .orange {
+        color: orangered;
+    }
+
+    .back_blue {
+        background-color: #001236;
+    }
+
+    {% block css %}
+    {% endblock %}
+</style>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark back_blue">
+    <div class="container nav-cont" id="nav">
+        <a class="navbar-brand font-weight-bold"><span class="orange">Comment</span> Searcher</a>
+
+
+        <form class="form-inline d-flex ">
+            <input class="form-control mr-sm-2 d-inline-block " type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-sm-0 d-inline-block m-3" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+{% block body %}
+{% endblock %}
+
+</body>
+</html>
