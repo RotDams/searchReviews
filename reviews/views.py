@@ -1,11 +1,11 @@
 from django.db.models import Q
 from django.shortcuts import render
 
-from .models import Comment
+from .models import Review
 
 
 def search_view(request):
-    all_comments = Comment.objects.all()
+    all_comments = Review.objects.all()
     word = request.POST['searchname']
 
     if request.method == "POST" and word:
