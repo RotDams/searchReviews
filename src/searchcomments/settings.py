@@ -26,6 +26,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -35,9 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    'comments',
-    'pages',
+    'src',
+    'src.comments',
+    'src.pages',
 ]
 
 MIDDLEWARE = [
