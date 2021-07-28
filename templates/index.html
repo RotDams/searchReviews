@@ -1,8 +1,19 @@
 {% extends 'base.html' %}
 
 {% block body %}
-    <h1>Hello world</h1>
-
-    {{ request.user }}
-    <p>this is a template2</p>
+    <div class="container text-center p-5">
+        <div class="card w-50 m-auto align-middle">
+            <div class="card-header">
+                Tap a word to find comments relative to it.
+            </div>
+            <div class="card-body">
+                <form class="form-inline d-flex " method=POST action="{% url 'search' %}">
+                    {% csrf_token %}
+                    <input class="form-control mr-sm-2 d-inline-block " type="search" placeholder="Search"
+                           aria-label="Search" name="searchname">
+                    <button class="btn btn-outline-success my-sm-0 d-inline-block m-3" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
 {% endblock %}

@@ -29,11 +29,13 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark back_blue">
     <div class="container nav-cont" id="nav">
-        <a class="navbar-brand font-weight-bold"><span class="orange">Comment</span> Searcher</a>
+        <a class="navbar-brand font-weight-bold" href="{% url 'home' %}"><span class="orange">Comment</span>
+            Searcher</a>
 
-
-        <form class="form-inline d-flex ">
-            <input class="form-control mr-sm-2 d-inline-block " type="search" placeholder="Search" aria-label="Search">
+        <form class="form-inline d-flex " method=POST action="{% url 'search' %}">
+            {% csrf_token %}
+            <input class="form-control mr-sm-2 d-inline-block " type="search" placeholder="Search" aria-label="Search"
+                   name="searchname">
             <button class="btn btn-outline-success my-sm-0 d-inline-block m-3" type="submit">Search</button>
         </form>
     </div>
