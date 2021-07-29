@@ -2,12 +2,13 @@
 
 {% block body %}
     <div class="container">
-        <h1 class="text-center">Search panel ({{ word_researched }})</h1>
-        {% for item in all_comments %}
+        <h1 class="text-center">Searched word: {{ word_researched }}</h1>
+
+        {% for item in all_reviews %}
             <div class="card m-3">
                 <div class="card-header">
                     Review written by: <span class="fw-bold">{{ item.author }}</span>
-                    on: <span class="fw-bold"> {{ item.date }}</span>
+                    on: <span class="fw-bold">{{ item.date }}</span>
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">{{ item.title }}</h5>
@@ -16,4 +17,5 @@
             </div>
         {% endfor %}
     </div>
+
 {% endblock %}

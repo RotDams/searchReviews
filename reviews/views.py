@@ -5,14 +5,14 @@ from .models import Review
 
 
 def search_view(request):
-    all_comments = Review.objects.all()
+    all_reviews = Review.objects.all()
     word = request.POST['searchname']
 
     if request.method == "POST" and word:
-        all_comments = all_comments.filter(Q(title__contains=word) | Q(body__contains=word))
+        all_reviews = all_reviews.filter(Q(title__contains=word) | Q(body__contains=word))
 
     context = {
-        'all_comments': all_comments,
+        'all_reviews': all_reviews,
         'word_researched': word,
     }
 
